@@ -1,6 +1,10 @@
 # ha-node-red-automations
 Home Assistant Node-RED Automations
 
+## UPDATED 4/4/2018
+
+Added tab for notifications flows, set up vacation flows in Security tab - If family is outside of geozone, input boolean gets switched on  and then regular home automations flows are disabled and random lighting is turned on. Added Thermostat UI from /u/twitchy_fingers on Reddit to HA Dashboard. Finally a lot of small bug fixes to the logic in various flows. Thanks all for the feedback.
+
 ## About
 
 These are my personal automations and utilities for Home Assistant, using the node-red-contrib-homeassistant plugin. See the screenshots for quick visual representations of the flows or import ha-flows.json into your Node-RED or a test Node-RED project to see the logic. 
@@ -26,6 +30,14 @@ Here we handle notifications on on location updates. It uses some logic to try t
 
 Finally here we have everyone's favorite feature which is the WWE inspired entrance announcment and theme song when we return home. 
 
+### Notifications
+
+![notifications](https://raw.githubusercontent.com/walthowd/ha-node-red-automations/master/notifications-1.png)
+
+All flows where Home Assistant is conveying information only. This includes text to speech alerts that play on Google Home Minis and push alerts to family iphones. 
+
+Calendar alerts get spoken via the Home Assistant caldav component, trash pickup days we get an audible reminder when we are home. This also checks the calendar to handle holidays when the schedule changes. Finally, mail and package notification.
+
 ### Security 
 
 ![security](https://raw.githubusercontent.com/walthowd/ha-node-red-automations/master/security.png)
@@ -44,7 +56,7 @@ This houses all the crazy little things like reformatting MQTT state messages fo
 
 ![dashboard](https://raw.githubusercontent.com/walthowd/ha-node-red-automations/master/dashboard.png)
 
-Creates a node-red dashboard for some basic graphing and metrics.
+Creates a node-red dashboard for some basic graphing and metrics. Also using ThermoStat UI from /u/twitch_fingers on Reddit to start creating a control dashboard for the system. 
 
 ### Dev 
 
@@ -68,6 +80,7 @@ The full list of packages that are required:
         "node-red-node-email": "0.1.24",
         "node-red-node-random": "0.1.0",
         "node-red-node-rbe": "0.2.1"
+        "node-red-contrib-vacation-timer": "2.2.8"
         
 ## Produced
 
