@@ -11,7 +11,7 @@
         "node-red-contrib-stoptimer": "0.0.7",
         "node-red-contrib-time-range-switch": "0.5.1",
         "node-red-contrib-traffic": "0.2.1",
-        "node-red-dashboard": "2.8.1",
+        "node-red-dashboard": "2.17.1",
         "node-red-node-email": "0.1.24",
         "node-red-node-random": "0.1.0",
         "node-red-node-rbe": "0.2.1"
